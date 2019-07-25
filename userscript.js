@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DevTools Anti-Detector
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  something
 // @match        *://*/*
 // @grant        unsafeWindow
