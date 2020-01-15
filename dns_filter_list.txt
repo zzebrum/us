@@ -1,4 +1,4 @@
-! Title: Zblocked too long name whatever we can think of привет! Ж)
+! Title: Zblocked too long name 
 ! Updated: Tue, 15 Dec 2020 15:39:57 +0000 
 ! Version: 1.0.3
 
