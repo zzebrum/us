@@ -10,3 +10,4 @@
 ||atavas.ru$badfilter
 ||meduza.io$badfilter
 @@/example.*/
+@@||mail.ru^
