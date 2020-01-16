@@ -8,3 +8,4 @@
 @@||pornhub.com^
 ||pornhub.com$badfilter
 ||atavas.ru$badfilter
+||meduza.io$badfilter
