@@ -9,4 +9,4 @@
 ||pornhub.com$badfilter
 ||atavas.ru$badfilter
 ||meduza.io$badfilter
-/example.*/
+@@/example.*/
