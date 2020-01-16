@@ -6,3 +6,4 @@
 ||atavas.ru
 ||meduza.io
 /example.*/
+||mail.ru^$important
