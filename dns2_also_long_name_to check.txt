@@ -5,4 +5,4 @@
 ||pornhub.com
 ||atavas.ru
 ||meduza.io
-@@/example.*/$important
+/example.*/
