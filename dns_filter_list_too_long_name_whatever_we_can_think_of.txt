@@ -4,7 +4,7 @@
 
 ||google.com^
 ||facebook.com^
-0.0.0.0 lenta.ru^
+0.0.0.0 lenta.ru
 @@||pornhub.com^
 ||pornhub.com$badfilter
 ||atavas.ru$badfilter
