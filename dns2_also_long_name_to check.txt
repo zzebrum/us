@@ -1,9 +1,10 @@
-!Title: custom AdGuard Simplified domain names filter :) приветы
+! Title: 123custom AdGuard Simplified domain names filter :) приветы
 ! Updated: Tue, 16 Dec 2020 12:39:57 +0000 
-! Version: 2.0.3
+! Version: 3.0.3
 
 ||pornhub.com
 ||atavas.ru
 ||meduza.io
 /example.*/
 ||mail.ru^$important
+||ya.ru
