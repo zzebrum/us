@@ -1,6 +1,6 @@
 ! Title: 123custom AdGuard Simplified domain names filter :) приветы
-! Updated: Tue, 16 Dec 2020 12:39:57 +0000 
-! Version: 3.0.3
+! Updated: Tue, 31 March 2020 14:39:57 +0000 
+! Version: 3.0.4
 
 ||pornhub.com
 ||atavas.ru
@@ -8,3 +8,4 @@
 /example.*/
 ||mail.ru^$important
 ||ya.ru
+||i.ua
