@@ -1,5 +1,6 @@
 ! Title: AdGuard test filter
 ! Description: no
-! Version: 0.0.1
+! Version: 0.0.2
 
 @@||gismeteo.ru^
+||ya.ru^
