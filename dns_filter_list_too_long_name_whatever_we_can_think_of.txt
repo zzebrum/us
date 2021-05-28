@@ -1,6 +1,6 @@
 ! Title: Zblocked привет Ж)
-! Updated: Tue, 15 Dec 2020 15:39:57 +0000 
-! Version: 0.0.0.0
+! Updated: Mon, 24 May 2021 15:39:57 +0000 
+! Version: 0.0.0.1
 
 ||google.com^
 ||facebook.com^
