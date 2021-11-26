@@ -8,4 +8,6 @@ championat.com##.header
 !#if (adguard && !adguard_app_android)
 example.org##div
 ||example.com^
+! this one shouldn't work
+!#include https://testcases.adguard.com/Filters/simple-rules/test-simple-rules.txt
 !#endif
