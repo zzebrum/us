@@ -3,6 +3,8 @@
 ! Version: 0.0.2
 ! TimeUpdated: 2021-11-26T12:31:35
 
+example.org##div
+
 ! directives can be combined
 !#if (adguard_app_android)
 !#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
