@@ -5,5 +5,7 @@
 
 ! directives can be combined
 !#if (adguard_app_android)
-!#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
+!#include androidspecific.txt
 !#endif
+
+example.org##div
