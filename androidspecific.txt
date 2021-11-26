@@ -1,0 +1,5 @@
+! Title: androidspecific.txt rules for main pre-processor directives test
+! Version: 0.0.1
+! TimeUpdated: 2021-11-26T16:31:35+03:00
+
+||example.org^
