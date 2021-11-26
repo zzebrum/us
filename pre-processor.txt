@@ -5,7 +5,7 @@
 
 championat.com##.header
 
-!#if (adguard && !adguard_app_android)
+!#if (adguard_app_android)
 example.org##div
 ||example.com^
 ! this one shouldn't work
