@@ -1,0 +1,10 @@
+! Title: pre-processor directives
+! Description: not yet
+! Version: 0.0.1
+! TimeUpdated: 2021-11-26T12:31:35+03:00
+
+
+! directives can be combined
+!#if (adguard_app_android)
+!#include /androidspecific.txt
+!#endif
