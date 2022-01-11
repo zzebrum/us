@@ -34,10 +34,6 @@ body:
       label: Expected behavior
       description: A clear description of what should happen 
       placeholder: Describe what went wrong step by step, so we could reproduce the issue on our end
-      value: |
-          1.
-          2.
-          3.
     validations:
       required: true
   - type: textarea
