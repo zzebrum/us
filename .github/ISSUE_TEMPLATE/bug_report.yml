@@ -1,0 +1,72 @@
+name: Bug Report
+description: Create a bug report to help us improve AdGuard for iOS
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: |
+        As an open-source project with a dedicated but small maintainer team, it can sometimes take a long time for issues to be addressed so please be patient and we will get back to you as soon as we can.
+      options:
+        - label: I am running the latest version
+          required: true
+        - label:  I checked the documentation and found no answer
+          required: true
+        - label: I checked to make sure that this issue has not already been filed
+          required: true
+  - type: input
+    attributes:
+      label: AdGuard version
+      placeholder: e.g. v4.3
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: iOS version
+      placeholder: e.g. v15.2
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Where the problem happens
+      placeholder: e.g. Safari browser or Apple TV app
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen 
+      placeholder: Describe here step by step what went wrong, so we could reproduce the issue on our side
+      value: |
+          1.
+          2.
+          3.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: A clear and concise description of what actually happened
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshot and additional information
+      description: |
+        1. Add screenshots of the problem. You can drag and drop images or paste them from clipboard;
+           Use `<details> </details>` tag to hide screenshots under the spoiler; 
+        2. Any additional information developers should know
+      value: |
+          1. <comment>
+
+          2. Screenshots
+          <details><summary>Screenshot 1:</summary>
+
+          <!-- paste screenshot here -->
+
+          </details>
+
+          <details><summary>Screenshot N:</summary>
+
+          <!-- paste screenshot here -->
+
+          </details>
