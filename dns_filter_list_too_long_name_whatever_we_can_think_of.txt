@@ -1,6 +1,6 @@
 ! Title: Zblocked привет Ж)
-! Updated: Mon, 24 May 2022 15:39:57 +0000 
-! Version: 0.0.0.2
+! Updated: Mon, 26 May 2022 15:39:57 +0000 
+! Version: 0.0.0.3
 
 ||google.com^
 ||facebook.com^
@@ -11,3 +11,4 @@
 ||meduza.io$badfilter
 @@/example.*/
 @@||mail.ru^
+||ya.ru^
