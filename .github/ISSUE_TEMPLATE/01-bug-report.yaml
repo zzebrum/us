@@ -13,11 +13,8 @@ body:
       label: Please answer the following questions for yourself before submitting an issue.
       options:
         - label: Filters were updated before reproducing an issue
-          required: true
         - label: I checked the [knowledgebase](https://adguard.com/kb/) and found no answer
-          required: true
         - label: I checked to make sure that this issue has not already been filed
-          required: true
     validations:
       required: true
   - type: input
