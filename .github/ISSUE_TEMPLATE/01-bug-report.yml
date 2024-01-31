@@ -250,3 +250,41 @@ body:
       description: Please provide a link to the custom DNS you use
     validations:
       required: false
+      
+  - type: dropdown
+    id: dns_protocol
+    attributes:
+      label: DNS protocol
+      multiple: false
+      options:
+        - Regular
+        - DNSCrypt
+        - DNS-over-HTTPS
+        - DNS-over-TLS
+        - DNS-over-QUIC
+    validations:
+      required: false
+
+  - type: dropdown
+    id: stealth
+    attributes:
+      label: What Stealth Mode options do you have enabled?
+      description: Select any of these options if you have them enabled in Stealth Mode. You can skip this step if it's not relevant.
+      multiple: true
+      options:
+        - Block trackers
+        - Remove tracking parameters from URLs
+        - Hide your search queries
+        - Ask websits not to track you
+        - Self-destruction of third-party cookies
+        - Self-destruction of first-party cookies
+        - Block ETag and If-None-Match headers
+        - Block the third-party Authorization header
+        - Disable WebRTC
+        - Block Push API
+        - Block Location API
+        - Hide your Referrer from third-parties
+        - Hide your User Agent
+        - Hide your IP address
+        - Remove X-client-Data header from HTTP request
+        - Protect against DPI
