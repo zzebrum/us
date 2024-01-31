@@ -52,3 +52,26 @@ body:
         - label: yes, I have it
     validations:
       required: false
+
+  - type: dropdown
+    id: routing_mode
+    attributes:
+      label: Routing mode
+      multiple: false
+      options:
+        - Local VPN
+        - Automatic proxy
+        - Manual proxy
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### What filters do you have enabled?"
+
+  - type: markdown
+    attributes:
+      value: |
+        Select enabled filters if they are related to the application bug.
+        If the issue is related to the filtering (missed ads, cookie, etc.)
+        use the [Web Reporting Tool](https://kb.adguard.com/technical-support/reporting-tool) please.
