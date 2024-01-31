@@ -1,6 +1,6 @@
 ---
 
-name: 🐞 Bug report
+name: Bug report
 description: If you found something that we should know about
 labels: [Bug]
 body:
