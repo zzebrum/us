@@ -7,7 +7,7 @@ body:
       value: Thanks for taking the time to fill out this bug report!
   - type: checkboxes
     attributes:
-      label: Please answer the following questions for yourself before submitting an issue:
+      label: Please answer the following questions for yourself before submitting an issue
       options:
         - label: Filters were updated before reproducing an issue
           required: true
