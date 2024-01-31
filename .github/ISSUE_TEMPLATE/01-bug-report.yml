@@ -44,12 +44,3 @@ body:
         - label: yes, I do
     validations:
       required: false
-
-  - type: checkboxes
-    attributes:
-      label: Root access
-      description: Do you have root privileges?
-      options:
-        - label: yes, I have it
-    validations:
-      required: false
