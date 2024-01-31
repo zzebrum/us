@@ -26,9 +26,10 @@ body:
       required: true
 
   - type: textarea
+    id: enviroment
     attributes:
       label: Environment
-      value:
+      value: |
           - OS version:
           - Device:
       render: markdown
