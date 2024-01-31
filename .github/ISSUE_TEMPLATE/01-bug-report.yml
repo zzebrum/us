@@ -35,3 +35,21 @@ body:
       render: markdown
     validations:
       required: true
+
+    - type: checkboxes
+    attributes:
+      label: HTTPS filtering
+      description: Do you have HTTPS filtering enabled?
+      options:
+        - label: yes, I do
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Root access
+      description: Do you have root privileges?
+      options:
+        - label: yes, I have it
+    validations:
+      required: false
