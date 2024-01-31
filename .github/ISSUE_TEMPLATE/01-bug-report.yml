@@ -11,7 +11,7 @@ body:
       options:
         - label: Filters were updated before reproducing an issue
           required: true
-        - label: I checked the [knowledgebase](https://adguard.com/kb/) and found no answer
+        - label: I checked the [knowledge base](https://adguard.com/kb/) and found no answer
           required: true
         - label: I checked to make sure that this issue has not already been filed
           required: true
@@ -29,6 +29,10 @@ body:
     id: enviroment
     attributes:
       label: Environment
+      description: |
+        examples:
+          - **OS version**: Android 14
+          - **Device**: Huawei P50 Pro 
       value: |
         - OS version:
         - Device:
@@ -86,7 +90,7 @@ body:
         - AdGuard Mobile Ads filter
         - EasyList
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: filters_privacy
@@ -242,14 +246,6 @@ body:
         - Custom DNS
     validations:
       required: true
-
-  - type: textarea
-    id: custom_dns
-    attributes:
-      label: Custom DNS
-      description: Please provide a link to the custom DNS you use
-    validations:
-      required: false
       
   - type: dropdown
     id: dns_protocol
@@ -262,6 +258,15 @@ body:
         - DNS-over-HTTPS
         - DNS-over-TLS
         - DNS-over-QUIC
+    validations:
+      required: false
+      
+  - type: textarea
+    id: custom_dns
+    attributes:
+      label: Custom DNS
+      description: Please provide a link to the custom DNS you use
+      placeholder: If you have enabled DNS from the pre-defined list, skip this
     validations:
       required: false
 
