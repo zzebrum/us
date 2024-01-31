@@ -225,7 +225,6 @@ body:
     id: dns_protection
     attributes:
       label: Which DNS server do you use?
-      description: |
       multiple: false
       options:
         - DNS protection disabled
@@ -256,7 +255,6 @@ body:
     id: dns_protocol
     attributes:
       label: DNS protocol
-      description: |
       multiple: false
       options:
         - Regular
@@ -307,7 +305,6 @@ body:
     id: how_it_should_be
     attributes:
       label: Expected Behavior
-      description:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
@@ -315,7 +312,6 @@ body:
     id: how_it_is
     attributes:
       label: Actual Behavior
-      description: |
       placeholder: A clear description of what happened instead.
     validations:
       required: true
@@ -323,7 +319,6 @@ body:
     id: screens
     attributes:
       label: Screenshots
-      description: |
         If applicable add screenshots explaining your problem.
         You can drag and drop images or paste them from clipboard.
         Use `<details> </details>` tag to hide screenshots under the spoiler.
@@ -340,7 +335,6 @@ body:
     id: additional
     attributes:
       label: Additional Information
-      description: |
       placeholder: Add any other context about the problem here.
     validations:
       required: false
