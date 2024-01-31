@@ -220,3 +220,33 @@ body:
         - AdGuard Experimental filter
     validations:
       required: false
+      
+  - type: dropdown
+    id: dns_protection
+    attributes:
+      label: Which DNS server do you use?
+      multiple: false
+      options:
+        - DNS protection disabled
+        - Automatic DNS
+        - AdGuard DNS
+        - AdGuard DNS Family Protection
+        - AdGuard DNS Non-filtering
+        - Google DNS
+        - Cloudflare DNS
+        - Cloudflare for Families - Malware and Adult Content
+        - Cloudflare for Families - Malware Blocking
+        - Open DNS
+        - Open DNS with Family Shield
+        - Quad9
+        - Custom DNS
+    validations:
+      required: true
+
+  - type: textarea
+    id: custom_dns
+    attributes:
+      label: Custom DNS
+      description: Please provide a link to the custom DNS you use
+    validations:
+      required: false
