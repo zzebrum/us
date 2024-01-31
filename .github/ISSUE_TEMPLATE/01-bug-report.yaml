@@ -34,7 +34,7 @@ body:
         examples:
           - **OS version**: Android 14
           - **Device**: Huawei P50 Pro 
-      value: |
+      value:
           - OS version:
           - Device:
       render: markdown
