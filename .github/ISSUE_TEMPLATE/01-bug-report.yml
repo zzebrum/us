@@ -29,9 +29,9 @@ body:
     id: enviroment
     attributes:
       label: Environment
-      value:
-          - OS version:
-          - Device:
+      value: |
+        - OS version:
+        - Device:
       render: markdown
     validations:
       required: true
