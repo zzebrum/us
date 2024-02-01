@@ -33,9 +33,11 @@ body:
       label: Tunnel mode
       multiple: false
       options:
+        - Split-Tunnel
         - Full-Tunnel
         - Full-Tunnel (without VPN icon)
-        - Split-Tunnel
+    validations:
+      required: true
 
   - type: textarea
     attributes:
@@ -218,7 +220,7 @@ body:
         - AdGuard
         - Native
     validations:
-      required: false
+      required: true
 
   - type: dropdown
     id: dns_protection
@@ -269,8 +271,13 @@ body:
     id: what-happened
     attributes:
       label: Issue Details
-      description: What happened?
-      placeholder: Please describe the steps to reproduce the issue you've experienced.
+      description: Please provide a set of steps to reproduce the issue.
+      placeholder:
+      value: |
+        Steps to reproduce:
+        1.
+        2.
+        3.
     validations:
       required: true
 
@@ -282,6 +289,14 @@ body:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
+  
+  - type: textarea
+    id: how_it_is
+    attributes:
+      label: Actual Behavior
+      placeholder: A clear description of what happened instead.
+    validations:
+      required: true
 
   - type: textarea
     id: screens
@@ -297,7 +312,7 @@ body:
           <!-- paste screenshot here -->
           </details>
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additional
