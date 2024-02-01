@@ -1,5 +1,5 @@
 name: 🌱 Feature request
-description: If you know how AdGuard for iOS can be improved
+description: If you know how AdGuard VPN can be improved
 labels: ["Feature request"]
 body:
   - type: textarea
@@ -15,7 +15,6 @@ body:
     id: how_it_should_be
     attributes:
       label: Proposed solution
-      description:
       placeholder: Describe the solution you'd like in a clear and concise manner.
     validations:
       required: true
@@ -24,7 +23,6 @@ body:
     id: additional
     attributes:
       label: Alternative solution
-      description:
       placeholder: A clear and concise description of any alternative solutions or features you've considered.
     validations:
       required: false
