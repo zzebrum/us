@@ -68,6 +68,7 @@ body:
       label: Which DNS server do you use?
       multiple: false
       options:
+        - None, AdGuard VPN app works in integrated mode
         - Default
         - AdGuard DNS
         - AdGuard DNS Family Protection
@@ -81,7 +82,7 @@ body:
         - Quad9
         - Custom DNS
     validations:
-      required: false
+      required: true
       
   - type: dropdown
     id: dns_protocol
@@ -128,6 +129,14 @@ body:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
+
+  - type: textarea
+    id: how_it_is
+    attributes:
+      label: Actual Behavior
+      placeholder: A clear description of what happened instead.
+    validations:
+      required: true
 
   - type: textarea
     id: screens
