@@ -34,11 +34,9 @@ body:
         Examples:
           - **OS**: 17
           - **Device**: iphone 15
-          - **Fallback DNS**: 1.1.1.1
       value: |
           - OS:
           - Device:
-          - Bootstrap or fallback servers, other low-level settings, etc.:
     validations:
       required: true
 
@@ -244,7 +242,25 @@ body:
     attributes:
       label: Custom DNS
       description: Please provide a link to the custom DNS you use
-      placeholder: If you have enabled DNS from the pre-defined list, skip this
+      placeholder: If you have enabled DNS from the pre-defined list, skip this step
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dns_filter
+    attributes:
+      label: DNS filtering
+      description: Do you have AdGuard DNS filter enabled?
+      options:
+        - label: yes, I do
+          required: false
+
+  - type: textarea
+    id: custom_dns_filter
+    attributes:
+      label: Custom DNS filter
+      description: Please provide a link to the custom DNS filter you use
+      placeholder: Skip this step if you have DNS protection disabled.
     validations:
       required: false
 
@@ -274,6 +290,19 @@ body:
         - Full-Tunnel (without VPN icon)
     validations:
       required: true
+
+  - type: textarea
+    id: advanced
+    attributes:
+      label: Low-level settings
+      description: Let us know if you have made any changes to the low-level settings
+      placeholder: 
+      value: |
+        Bootstrap server:
+        Fallback server:
+        Blocking mode, etc:
+    validations:
+      required: false
 
   - type: textarea
     id: what-happened
