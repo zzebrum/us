@@ -34,10 +34,11 @@ body:
         Examples:
           - **OS**: 17
           - **Device**: iphone 15
+          - **Fallback DNS**: 1.1.1.1
       value: |
           - OS:
           - Device:
-          - Bootstrap or fallbacl servers, other low-level settings, etc.:
+          - Bootstrap or fallback servers, other low-level settings, etc.:
     validations:
       required: true
 
@@ -203,6 +204,7 @@ body:
     id: dns_protection
     attributes:
       label: Which DNS server do you use?
+      description: Skip this if DNS protection is disabled
       multiple: false
       options:
         - DNS protection disabled
@@ -224,16 +226,18 @@ body:
   - type: dropdown
     id: dns_protocol
     attributes:
+      description: Skip this if DNS protection is disabled
       label: DNS protocol
       multiple: false
       options:
+        - DNS protection disabled
         - Regular
         - DNSCrypt
         - DNS-over-HTTPS
         - DNS-over-TLS
         - DNS-over-QUIC
     validations:
-      required: false
+      required: true
       
   - type: textarea
     id: custom_dns
@@ -248,6 +252,7 @@ body:
     id: dns_implementation
     attributes:
       label: DNS implementation
+      description: Skip this if DNS protection is disabled
       multiple: false
       options:
         - DNS protection disabled
@@ -260,8 +265,10 @@ body:
     id: tunnel_mode
     attributes:
       label: Tunnel mode
+      description: Skip this if DNS protection is disabled
       multiple: false
       options:
+        - DNS protection disabled
         - Split-Tunnel
         - Full-Tunnel
         - Full-Tunnel (without VPN icon)
