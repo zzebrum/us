@@ -27,18 +27,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: tunnel_mode
-    attributes:
-      label: Tunnel mode
-      multiple: false
-      options:
-        - Split-Tunnel
-        - Full-Tunnel
-        - Full-Tunnel (without VPN icon)
-    validations:
-      required: true
-
   - type: textarea
     attributes:
       label: Environment
@@ -212,17 +200,6 @@ body:
       required: false
 
   - type: dropdown
-    id: dns_implementation
-    attributes:
-      label: DNS implementation
-      multiple: false
-      options:
-        - AdGuard
-        - Native
-    validations:
-      required: true
-
-  - type: dropdown
     id: dns_protection
     attributes:
       label: Which DNS server do you use?
@@ -266,6 +243,30 @@ body:
       placeholder: If you have enabled DNS from the pre-defined list, skip this
     validations:
       required: false
+
+  - type: dropdown
+    id: dns_implementation
+    attributes:
+      label: DNS implementation
+      multiple: false
+      options:
+        - DNS protection disabled
+        - AdGuard
+        - Native
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tunnel_mode
+    attributes:
+      label: Tunnel mode
+      multiple: false
+      options:
+        - Split-Tunnel
+        - Full-Tunnel
+        - Full-Tunnel (without VPN icon)
+    validations:
+      required: true
 
   - type: textarea
     id: what-happened
