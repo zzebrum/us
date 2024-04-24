@@ -42,8 +42,8 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: HTTPS filtering
-      description: Do you have HTTPS filtering enabled?
+      label: Traffic filtering
+      description: Do you have traffic filtering enabled?
       options:
         - label: yes, I do
     validations:
@@ -279,7 +279,7 @@ body:
         - Remove X-client-Data header from HTTP request
         - Protect from DPI
 
-  - type: textarea
+  - type: input
     id: customer_id
     attributes:
       label: Support ticket ID
@@ -287,6 +287,7 @@ body:
       placeholder: Enter a ticket ID
     validations:
       required: false
+      
   - type: textarea
     id: what-happened
     attributes:
