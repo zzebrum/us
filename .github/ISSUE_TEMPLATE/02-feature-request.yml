@@ -1,6 +1,6 @@
 name: 🌱 Feature request
-description: If you know how AdGuard for Android can be improved
-labels: "Feature request"
+description: If you know how AdGuard for iOS can be improved
+labels: ["Feature request"]
 body:
   - type: textarea
     id: what-happened
@@ -10,7 +10,7 @@ body:
       placeholder: Is your feature request related to a problem? Please add a clear and concise description of what the problem is.
     validations:
       required: true
-      
+
   - type: textarea
     id: how_it_should_be
     attributes:
@@ -19,7 +19,7 @@ body:
       placeholder: Describe the solution you'd like in a clear and concise manner.
     validations:
       required: true
-      
+
   - type: textarea
     id: additional
     attributes:
@@ -33,4 +33,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardForAndroid/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdguardForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
