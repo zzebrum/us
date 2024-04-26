@@ -15,40 +15,69 @@ body:
           required: true
         - label: I checked to make sure that this issue has not already been filed
           required: true
+      
   - type: input
     id: app_version
     attributes:
       label: AdGuard version
       description: What version of our application are you running?
-      placeholder: For example, 7.18.1
-    validations:
-      required: true
-  - type: input
-    id: br_version
-    attributes:
-      label: Browser version
-      description: What browser do you use?
-      placeholder: For example, Chrome 124
+      placeholder: For example, 4.3.1
     validations:
       required: true
 
-  - type: input
-    id: os_version
+  - type: textarea
+    id: enviroment
     attributes:
-      label: OS version
-      description: What operating system do you use?
-      placeholder: For example, Windows 11, 21H2 (OS build 22000)​​
+      label: Environment
+      description: |
+        examples:
+          - **OS version**: Android 14
+          - **Device**: Huawei P50 Pro 
+      value: |
+        - OS version:
+        - Device:
     validations:
       required: true
+  
   - type: checkboxes
     attributes:
-      label: Traffic filtering
-      description: Do you have traffic filtering enabled?
+      label: HTTPS filtering
+      description: Do you have HTTPS filtering enabled?
       options:
         - label: yes, I do
     validations:
       required: false
-      
+
+  - type: checkboxes
+    attributes:
+      label: Root access
+      description: Do you have root privileges?
+      options:
+        - label: yes, I have it
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Integration with AdGuard VPN
+      description: Do you have integrated mode enabled in AdGuard VPN app?
+      options:
+        - label: yes, I do
+    validations:
+      required: false
+
+  - type: dropdown
+    id: routing_mode
+    attributes:
+      label: Routing mode
+      multiple: false
+      options:
+        - Local VPN
+        - Automatic proxy
+        - Manual proxy
+    validations:
+      required: true
+
   - type: markdown
     attributes:
       value: "### What filters do you have enabled?"
@@ -84,6 +113,7 @@ body:
         - Legitimate URL Shortener
         - Peter Lowe's Blocklist
         - Fanboy's Anti-Facebook List
+        - Fanboy's Anti-thirdparty Fonts
     validations:
       required: false
 
@@ -112,6 +142,7 @@ body:
         - AdGuard Widgets filter
         - Adblock Warning Removal List
         - Fanboy's Annoyances
+        - I don't care about cookies
         - EasyList Cookie List
         - Dandelion Sprout's Annoyances List
     validations:
@@ -124,22 +155,7 @@ body:
       multiple: true
       options:
         - Online Malicious URL Blocklist
-        - Phishing URL Blocklist
-        - Scam Blocklist by DurableNapkin
-        - uBlock Origin – Badware risks
         - NoCoin Filter List
-    validations:
-      required: false
-
-  - type: dropdown
-    id: filters_other
-    attributes:
-      label: Other
-      multiple: true
-      options:
-        - Filter unblocking search ads and self-promotion
-        - Fanboy's Anti-thirdparty Fonts
-        - AdGuard Experimental filter
     validations:
       required: false
 
@@ -205,6 +221,18 @@ body:
         - YousList
     validations:
       required: false
+
+  - type: dropdown
+    id: filters_other
+    attributes:
+      label: Other
+      multiple: true
+      options:
+        - Filter unblocking search ads and self-promotion
+        - AdGuard DNS filter
+        - AdGuard Experimental filter
+    validations:
+      required: false
       
   - type: dropdown
     id: dns_protection
@@ -213,7 +241,7 @@ body:
       multiple: false
       options:
         - DNS protection disabled
-        - System default DNS
+        - Automatic DNS
         - AdGuard DNS
         - AdGuard DNS Family Protection
         - AdGuard DNS Non-filtering
@@ -250,44 +278,31 @@ body:
       placeholder: If you have enabled DNS from the pre-defined list, skip this
     validations:
       required: false
+
   - type: dropdown
     id: stealth
     attributes:
       label: What Stealth Mode options do you have enabled?
-      description: Select any of these options if you have them enabled in Stealth Mode.
+      description: Select any of these options if you have them enabled in Stealth Mode. You can skip this step if it's not relevant.
       multiple: true
       options:
         - Block trackers
-        - Remove tracking parameters
+        - Remove tracking parameters from URLs
         - Hide your search queries
-        - Send Do-Not-Track header
+        - Ask websits not to track you
         - Self-destruction of third-party cookies
         - Self-destruction of first-party cookies
-        - Disable cache for third-party requests
+        - Block ETag and If-None-Match headers
         - Block the third-party Authorization header
-        - Block WebRTC
+        - Disable WebRTC
         - Block Push API
         - Block Location API
-        - Block Flash
-        - Disable Windows Telemetry
-        - Turn off Advertising ID
-        - Disable Microsoft Defender automatic samples submission
-        - Disable WAP Push Message Routing Service
         - Hide your Referrer from third-parties
         - Hide your User Agent
         - Hide your IP address
         - Remove X-client-Data header from HTTP request
-        - Protect from DPI
-
-  - type: input
-    id: customer_id
-    attributes:
-      label: Support ticket ID
-      description: If you've already sent us a diagnostic report through the application, share the ticket ID number. You can find it in an auto-reply email from AdGuard support after sending a report.
-      placeholder: Enter a ticket ID
-    validations:
-      required: false
-      
+        - Protect against DPI
+  
   - type: textarea
     id: what-happened
     attributes:
@@ -348,4 +363,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardForWindows/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdguardForAndroid/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
