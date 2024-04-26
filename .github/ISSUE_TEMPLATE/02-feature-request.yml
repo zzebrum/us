@@ -1,6 +1,8 @@
+---
+
 name: 🌱 Feature request
 description: If you know how AdGuard VPN can be improved
-labels: ["Feature request"]
+labels: ['feature request']
 body:
   - type: textarea
     id: what-happened
@@ -31,4 +33,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForMac/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
