@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+
   - type: checkboxes
     attributes:
       label: Please answer the following questions for yourself before submitting an issue.
@@ -15,13 +16,25 @@ body:
         - label: I checked to make sure that this issue has not already been filed
           required: true
 
-
   - type: input
     id: app_version
     attributes:
-      label: AdGuard VPN version
+      label: AdGuard VPN  version
       description: What version of our application are you running?
-      placeholder: For example, 2.7
+      placeholder: For example, 2.2
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Environment
+      description: |
+        Examples:
+          - **OS**: 17.3
+          - **Device**: iPhone 15
+      value: |
+          - OS:
+          - Device:
     validations:
       required: true
 
@@ -29,11 +42,24 @@ body:
     id: tunnel_mode
     attributes:
       label: Operating mode
+      description:
       multiple: false
       options:
         - VPN
-        - SOCKS5
-        - Integration with AdGuard
+        - Integrated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: exclusions_mode
+    attributes:
+      label: Exclusions mode
+      description: 
+      multiple: false
+      options:
+        - None, AdGuard VPN app works in integrated mode
+        - Regular
+        - Selective
     validations:
       required: true
 
@@ -43,6 +69,7 @@ body:
       label: Which DNS server do you use?
       multiple: false
       options:
+        - None, AdGuard VPN app works in integrated mode
         - Default
         - AdGuard DNS
         - AdGuard DNS Family Protection
@@ -56,21 +83,7 @@ body:
         - Quad9
         - Custom DNS
     validations:
-      required: false
-      
-  - type: dropdown
-    id: dns_protocol
-    attributes:
-      label: DNS protocol
-      multiple: false
-      options:
-        - Regular
-        - DNSCrypt
-        - DNS-over-HTTPS
-        - DNS-over-TLS
-        - DNS-over-QUIC
-    validations:
-      required: false
+      required: true
       
   - type: textarea
     id: custom_dns
@@ -82,33 +95,10 @@ body:
       required: false
 
   - type: textarea
-    attributes:
-      label: Environment
-      description: |
-        Examples:
-          - **OS**: Android 14
-          - **Device**: Huawei P50 Pro 
-      value: |
-          - OS:
-          - Device:
-      render: markdown
-    validations:
-      required: true
-
-  - type: checkboxes
-    attributes:
-      label: Root access
-      description: Do you have root privileges?
-      options:
-        - label: yes, I have it
-    validations:
-      required: false
-
-  - type: textarea
     id: what-happened
     attributes:
       label: Issue Details
-      description: Please provide a set of steps to reproduce the issue.
+      description: Please provide a set of steps to reproduce the issue
       placeholder:
       value: |
         Steps to reproduce:
@@ -122,6 +112,7 @@ body:
     id: how_it_should_be
     attributes:
       label: Expected Behavior
+      description:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
@@ -156,11 +147,13 @@ body:
     id: additional
     attributes:
       label: Additional Information
+      description:
       placeholder: Add any other context about the problem here.
     validations:
       required: false
+
   - type: markdown
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForAndroid/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
