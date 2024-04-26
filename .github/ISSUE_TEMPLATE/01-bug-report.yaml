@@ -1,10 +1,12 @@
 name: 🐞 Bug report
 description: If you found something that we should know about
-labels: "Bug"
+labels: ["Bug"]
 body:
   - type: markdown
     attributes:
-      value: Thanks for taking the time to fill out this bug report!
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
   - type: checkboxes
     attributes:
       label: Please answer the following questions for yourself before submitting an issue
@@ -15,72 +17,28 @@ body:
           required: true
         - label: I checked to make sure that this issue has not already been filed
           required: true
-      
+
   - type: input
     id: app_version
     attributes:
       label: AdGuard version
       description: What version of our application are you running?
-      placeholder: For example, 4.3.1
+      placeholder: For example, 4.5.3
     validations:
       required: true
 
   - type: textarea
-    id: enviroment
     attributes:
       label: Environment
       description: |
-        examples:
-          - **OS version**: Android 14
-          - **Device**: Huawei P50 Pro 
+        Examples:
+          - **OS**: 17.3
+          - **Device**: iPhone 15
       value: |
-        - OS version:
-        - Device:
+          - OS:
+          - Device:
     validations:
       required: true
-  
-  - type: checkboxes
-    attributes:
-      label: HTTPS filtering
-      description: Do you have HTTPS filtering enabled?
-      options:
-        - label: yes, I do
-    validations:
-      required: false
-
-  - type: checkboxes
-    attributes:
-      label: Root access
-      description: Do you have root privileges?
-      options:
-        - label: yes, I have it
-    validations:
-      required: false
-
-  - type: checkboxes
-    attributes:
-      label: Integration with AdGuard VPN
-      description: Do you have integrated mode enabled in AdGuard VPN app?
-      options:
-        - label: yes, I do
-    validations:
-      required: false
-
-  - type: dropdown
-    id: routing_mode
-    attributes:
-      label: Routing mode
-      multiple: false
-      options:
-        - Local VPN
-        - Automatic proxy
-        - Manual proxy
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: "### What filters do you have enabled?"
 
   - type: markdown
     attributes:
@@ -108,9 +66,7 @@ body:
       multiple: true
       options:
         - AdGuard Tracking Protection filter
-        - AdGuard URL Tracking filter
         - EasyPrivacy
-        - Legitimate URL Shortener
         - Peter Lowe's Blocklist
         - Fanboy's Anti-Facebook List
         - Fanboy's Anti-thirdparty Fonts
@@ -154,8 +110,19 @@ body:
       label: Security
       multiple: true
       options:
-        - Online Malicious URL Blocklist
         - NoCoin Filter List
+    validations:
+      required: false
+
+  - type: dropdown
+    id: filters_other
+    attributes:
+      label: Other
+      multiple: true
+      options:
+        - Filter unblocking search ads and self-promotion
+        - AdGuard DNS filter
+        - AdGuard Experimental filter
     validations:
       required: false
 
@@ -222,26 +189,24 @@ body:
     validations:
       required: false
 
-  - type: dropdown
-    id: filters_other
+  - type: checkboxes
     attributes:
-      label: Other
-      multiple: true
+      label: Advanced protection for Safari
+      description: Do you have advanced protection enabled in AdGuard for iOS app?
       options:
-        - Filter unblocking search ads and self-promotion
-        - AdGuard DNS filter
-        - AdGuard Experimental filter
+        - label: yes, I do
     validations:
       required: false
-      
+
   - type: dropdown
     id: dns_protection
     attributes:
       label: Which DNS server do you use?
+      description: Skip this if DNS protection is disabled
       multiple: false
       options:
         - DNS protection disabled
-        - Automatic DNS
+        - System default
         - AdGuard DNS
         - AdGuard DNS Family Protection
         - AdGuard DNS Non-filtering
@@ -259,55 +224,91 @@ body:
   - type: dropdown
     id: dns_protocol
     attributes:
+      description: Skip this if DNS protection is disabled
       label: DNS protocol
       multiple: false
       options:
+        - DNS protection disabled
         - Regular
         - DNSCrypt
         - DNS-over-HTTPS
         - DNS-over-TLS
         - DNS-over-QUIC
     validations:
-      required: false
+      required: true
       
   - type: textarea
     id: custom_dns
     attributes:
       label: Custom DNS
       description: Please provide a link to the custom DNS you use
-      placeholder: If you have enabled DNS from the pre-defined list, skip this
+      placeholder: If you have enabled DNS from the pre-defined list, skip this step.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dns_filter
+    attributes:
+      label: DNS filtering
+      description: Do you have AdGuard DNS filter enabled?
+      options:
+        - label: yes, I do
+          required: false
+
+  - type: textarea
+    id: custom_dns_filter
+    attributes:
+      label: Custom DNS filter
+      description: Please provide a link to the custom DNS filter you use
+      placeholder: Skip this step if you have DNS protection disabled.
     validations:
       required: false
 
   - type: dropdown
-    id: stealth
+    id: dns_implementation
     attributes:
-      label: What Stealth Mode options do you have enabled?
-      description: Select any of these options if you have them enabled in Stealth Mode. You can skip this step if it's not relevant.
-      multiple: true
+      label: DNS implementation
+      description: Skip this if DNS protection is disabled
+      multiple: false
       options:
-        - Block trackers
-        - Remove tracking parameters from URLs
-        - Hide your search queries
-        - Ask websits not to track you
-        - Self-destruction of third-party cookies
-        - Self-destruction of first-party cookies
-        - Block ETag and If-None-Match headers
-        - Block the third-party Authorization header
-        - Disable WebRTC
-        - Block Push API
-        - Block Location API
-        - Hide your Referrer from third-parties
-        - Hide your User Agent
-        - Hide your IP address
-        - Remove X-client-Data header from HTTP request
-        - Protect against DPI
-  
+        - DNS protection disabled
+        - AdGuard
+        - Native
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tunnel_mode
+    attributes:
+      label: Tunnel mode
+      description: Skip this if DNS protection is disabled
+      multiple: false
+      options:
+        - DNS protection disabled
+        - Split-Tunnel
+        - Full-Tunnel
+        - Full-Tunnel (without VPN icon)
+    validations:
+      required: true
+
+  - type: textarea
+    id: advanced
+    attributes:
+      label: Low-level settings
+      description: Let us know if you have made any changes to the low-level settings
+      placeholder: 
+      value: |
+        Bootstrap server:
+        Fallback server:
+        Blocking mode, etc:
+    validations:
+      required: false
+
   - type: textarea
     id: what-happened
     attributes:
       label: Issue Details
-      description: Please provide a set of steps to reproduce the issue.
+      description: Please provide a set of steps to reproduce the issue
       placeholder:
       value: |
         Steps to reproduce:
@@ -316,15 +317,16 @@ body:
         3.
     validations:
       required: true
-      
+
   - type: textarea
     id: how_it_should_be
     attributes:
       label: Expected Behavior
+      description:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
-      
+  
   - type: textarea
     id: how_it_is
     attributes:
@@ -332,7 +334,7 @@ body:
       placeholder: A clear description of what happened instead.
     validations:
       required: true
-      
+
   - type: textarea
     id: screens
     attributes:
@@ -344,13 +346,11 @@ body:
       placeholder: If applicable add screenshots explaining your problem.
       value: |
           <details><summary>Screenshot 1</summary>
-
           <!-- paste screenshot here -->
-
           </details>
     validations:
       required: false
-      
+
   - type: textarea
     id: additional
     attributes:
@@ -363,4 +363,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardForAndroid/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdguardForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
