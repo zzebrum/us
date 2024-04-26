@@ -1,6 +1,8 @@
+---
+
 name: 🌱 Feature request
-description: If you know how AdGuard for iOS can be improved
-labels: ["Feature request"]
+description: Create a feature request to help us improve AdGuard for Mac.
+labels: ['Feature request']
 body:
   - type: textarea
     id: what-happened
@@ -9,8 +11,7 @@ body:
       description: What happened?
       placeholder: Is your feature request related to a problem? Please add a clear and concise description of what the problem is.
     validations:
-      required: true
-
+      required: false
   - type: textarea
     id: how_it_should_be
     attributes:
@@ -18,8 +19,7 @@ body:
       description:
       placeholder: Describe the solution you'd like in a clear and concise manner.
     validations:
-      required: true
-
+      required: false
   - type: textarea
     id: additional
     attributes:
@@ -28,9 +28,8 @@ body:
       placeholder: A clear and concise description of any alternative solutions or features you've considered.
     validations:
       required: false
-
   - type: markdown
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdguardForMac/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
