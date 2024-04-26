@@ -1,12 +1,13 @@
+---
+
 name: 🐞 Bug report
 description: If you found something that we should know about
-labels: ["Bug"]
+labels: [Bug]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-
   - type: checkboxes
     attributes:
       label: Please answer the following questions for yourself before submitting an issue
@@ -23,22 +24,29 @@ body:
     attributes:
       label: AdGuard version
       description: What version of our application are you running?
-      placeholder: For example, 4.5.3
+      placeholder: For example, 2.14.1 release
+    validations:
+      required: true
+  - type: input
+    id: br_version
+    attributes:
+      label: Browser version
+      description: What browser do you use?
+      placeholder: For example, Safari 17
+    validations:
+      required: false
+  - type: input
+    id: os_version
+    attributes:
+      label: OS version
+      description: What operating system do you use?
+      placeholder: For example, macOS Sonoma 14.5
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     attributes:
-      label: Environment
-      description: |
-        Examples:
-          - **OS**: 17.3
-          - **Device**: iPhone 15
-      value: |
-          - OS:
-          - Device:
-    validations:
-      required: true
+      value: "### What filters do you have enabled?"
 
   - type: markdown
     attributes:
@@ -66,10 +74,11 @@ body:
       multiple: true
       options:
         - AdGuard Tracking Protection filter
+        - AdGuard URL Tracking filter
         - EasyPrivacy
+        - Legitimate URL Shortener
         - Peter Lowe's Blocklist
         - Fanboy's Anti-Facebook List
-        - Fanboy's Anti-thirdparty Fonts
     validations:
       required: false
 
@@ -98,7 +107,6 @@ body:
         - AdGuard Widgets filter
         - Adblock Warning Removal List
         - Fanboy's Annoyances
-        - I don't care about cookies
         - EasyList Cookie List
         - Dandelion Sprout's Annoyances List
     validations:
@@ -110,6 +118,10 @@ body:
       label: Security
       multiple: true
       options:
+        - Online Malicious URL Blocklist
+        - Phishing URL Blocklist
+        - Scam Blocklist by DurableNapkin
+        - uBlock Origin – Badware risks
         - NoCoin Filter List
     validations:
       required: false
@@ -123,6 +135,7 @@ body:
         - Filter unblocking search ads and self-promotion
         - AdGuard DNS filter
         - AdGuard Experimental filter
+        - Fanboy's Anti-thirdparty Fonts
     validations:
       required: false
 
@@ -188,25 +201,15 @@ body:
         - YousList
     validations:
       required: false
-
-  - type: checkboxes
-    attributes:
-      label: Advanced protection for Safari
-      description: Do you have advanced protection enabled in AdGuard for iOS app?
-      options:
-        - label: yes, I do
-    validations:
-      required: false
-
+      
   - type: dropdown
     id: dns_protection
     attributes:
       label: Which DNS server do you use?
-      description: Skip this if DNS protection is disabled
       multiple: false
       options:
         - DNS protection disabled
-        - System default
+        - System default DNS
         - AdGuard DNS
         - AdGuard DNS Family Protection
         - AdGuard DNS Non-filtering
@@ -224,91 +227,64 @@ body:
   - type: dropdown
     id: dns_protocol
     attributes:
-      description: Skip this if DNS protection is disabled
       label: DNS protocol
       multiple: false
       options:
-        - DNS protection disabled
         - Regular
         - DNSCrypt
         - DNS-over-HTTPS
         - DNS-over-TLS
         - DNS-over-QUIC
     validations:
-      required: true
+      required: false
       
   - type: textarea
     id: custom_dns
     attributes:
       label: Custom DNS
       description: Please provide a link to the custom DNS you use
-      placeholder: If you have enabled DNS from the pre-defined list, skip this step.
+      placeholder: If you have enabled DNS from the pre-defined list, skip this
     validations:
       required: false
-
-  - type: checkboxes
-    id: dns_filter
-    attributes:
-      label: DNS filtering
-      description: Do you have AdGuard DNS filter enabled?
-      options:
-        - label: yes, I do
-          required: false
-
-  - type: textarea
-    id: custom_dns_filter
-    attributes:
-      label: Custom DNS filter
-      description: Please provide a link to the custom DNS filter you use
-      placeholder: Skip this step if you have DNS protection disabled.
-    validations:
-      required: false
-
   - type: dropdown
-    id: dns_implementation
+    id: stealth
     attributes:
-      label: DNS implementation
-      description: Skip this if DNS protection is disabled
-      multiple: false
+      label: What Stealth Mode options do you have enabled?
+      description: Select any of these options if you have them enabled in Stealth Mode.
+      multiple: true
       options:
-        - DNS protection disabled
-        - AdGuard
-        - Native
-    validations:
-      required: true
+        - Block trackers
+        - Remove tracking parameters
+        - Hide your search queries
+        - Send Do-Not-Track signals
+        - Self-destruction of third-party cookies
+        - Self-destruction of first-party cookies
+        - Disable cache for third-party requests
+        - Block the third-party Authorization header
+        - Block WebRTC
+        - Block Push API
+        - Block Location API
+        - Block Java
+        - Hide your Referrer from third-parties
+        - Hide your User Agent
+        - Mask your IP address
+        - Remove X-client-Data header from HTTP request
+        - Protect from DPI
 
-  - type: dropdown
-    id: tunnel_mode
+  - type: input
+    id: customer_id
     attributes:
-      label: Tunnel mode
-      description: Skip this if DNS protection is disabled
-      multiple: false
-      options:
-        - DNS protection disabled
-        - Split-Tunnel
-        - Full-Tunnel
-        - Full-Tunnel (without VPN icon)
-    validations:
-      required: true
-
-  - type: textarea
-    id: advanced
-    attributes:
-      label: Low-level settings
-      description: Let us know if you have made any changes to the low-level settings
-      placeholder: 
-      value: |
-        Bootstrap server:
-        Fallback server:
-        Blocking mode, etc:
+      label: Support ticket ID
+      description: If you've already sent us a diagnostic report through the application, share the ticket ID number. You can find it in an auto-reply email from AdGuard support after sending a report.
+      placeholder: Enter a ticket ID
     validations:
       required: false
-
+      
   - type: textarea
     id: what-happened
     attributes:
       label: Issue Details
-      description: Please provide a set of steps to reproduce the issue
+      description: Please provide a set of steps to reproduce the issue.
       placeholder:
       value: |
         Steps to reproduce:
@@ -317,16 +293,15 @@ body:
         3.
     validations:
       required: true
-
+      
   - type: textarea
     id: how_it_should_be
     attributes:
       label: Expected Behavior
-      description:
       placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: false
-  
+      
   - type: textarea
     id: how_it_is
     attributes:
@@ -334,7 +309,7 @@ body:
       placeholder: A clear description of what happened instead.
     validations:
       required: true
-
+      
   - type: textarea
     id: screens
     attributes:
@@ -346,11 +321,13 @@ body:
       placeholder: If applicable add screenshots explaining your problem.
       value: |
           <details><summary>Screenshot 1</summary>
+
           <!-- paste screenshot here -->
+
           </details>
     validations:
       required: false
-
+      
   - type: textarea
     id: additional
     attributes:
@@ -363,4 +340,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardForiOS/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdguardForMac/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
