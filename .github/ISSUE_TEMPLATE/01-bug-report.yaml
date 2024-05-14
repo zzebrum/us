@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: If you found something that we should know about
-labels: [bug]
+labels: [Bug]
 body:
   - type: markdown
     attributes:
@@ -27,7 +27,7 @@ body:
       label: Environment
       description: |
         Examples:
-          - **OS**: Sonoma 14.5
+          - **OS**: Windows 11, 21H2 (OS build 22000)​​
           - **Other network-level software**: AdGuard ad blocker (or any Antivirus, Firewall)
       value: |
           - OS:
@@ -64,6 +64,14 @@ body:
       placeholder: If you have enabled DNS from the pre-defined list, skip this step.
     validations:
       required: false
+  - type: checkboxes
+    id: wintun
+    attributes:
+      label: Use Wintun
+      description: Do you use the Wintun driver to route traffic through VPN?
+      options:
+        - label: yes, I do
+          required: false
 
   - type: textarea
     id: what-happened
@@ -127,4 +135,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForMac/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNForWindows/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
