@@ -1,13 +1,7 @@
----
-
 name: 🌱 Feature request
-description: If you know how  AdGuard Browser Extension can be improved
-labels: ["Feature Request"]
+description: If you know how AdGuard can be improved
+labels: "Feature request"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        As an open-source project with a dedicated but small maintainer team, it can sometimes take a long time for issues to be addressed so please be patient and we will get back to you as soon as we can.
   - type: textarea
     id: what-happened
     attributes:
@@ -38,4 +32,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/AdguardBrowserExtension/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/CoreLibs/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
