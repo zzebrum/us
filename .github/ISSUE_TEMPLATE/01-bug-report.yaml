@@ -9,9 +9,9 @@ body:
         To avoid invalid reports, please check and confirm following checkboxes.
         It is highly recommended to use our [Web Reporting Tool](https://kb.adguard.com/en/technical-support/reporting-tool) instead of creating an issue on GitHub.
       options:
-        - label: Filters were updated before reproducing an issue;
+        - label: Filters were updated before reproducing an issue
           required: true
-        - label: AdGuard Extra version is up-to-date;
+        - label: AdGuard Extra version is up-to-date
           required: true
         - label: I checked to make sure that this issue has not already been filed
           required: true
@@ -31,7 +31,7 @@ body:
       required: true
 
   - type: dropdown
-    id: what-happened
+    id: problem_type
     attributes:
       label: What type of problem have you encountered?
       description: If the problem does not fall under any category that is listed here, please contact our tech support - support@adguard.com
