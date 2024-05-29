@@ -1,7 +1,12 @@
+---
+
 name: 🌱 Feature request
-description: If you know how AdGuard can be improved
-labels: "Feature request"
+description: If you know how  AdGuard VPN Browser Extension can be improved.
+labels: ["Feature request"]
 body:
+  - type: markdown
+    attributes:
+      value:
   - type: textarea
     id: what-happened
     attributes:
@@ -32,4 +37,4 @@ body:
     attributes:
       value: |
         ---
-        Upvote [important issues](https://github.com/AdguardTeam/CoreLibs/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
+        Upvote [important issues](https://github.com/AdguardTeam/AdGuardVPNExtension/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+) with a :+1:
