@@ -1,7 +1,7 @@
 ---
 
 name: 🌱 Feature request
-description: If you know how  AdGuard VPN Browser Extension can be improved.
+description: If you know how  AdGuard VPN Browser Extension can be improved
 labels: "Feature request"
 body:
   - type: textarea
