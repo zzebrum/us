@@ -3,13 +3,24 @@
 ! Version: 0.0.0.5
 
 ||google.com^
-||facebook.com^
+||vc.ru^
 0.0.0.0 lenta.ru
 @@||pornhub.com^
 ||pornhub.com$badfilter
+championat.com##.header
+
+!#if (adguard_app_android)
+example.org##div
+
+! this one shouldn't work
+!#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
+!#endif
 ||atavas.ru$badfilter
 ||meduza.io$badfilter
 @@/example.*/
-@@||mail.ru^
+@@||dzen.ru^
 ||ya.ru^
 ||i.ua^
+
+
+||example.com^
