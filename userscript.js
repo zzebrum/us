@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         DevTools Anti-Detector Katya
+// @name         DevTools Anti-Detector Katy
 // @namespace    http://tampermonkey.net/
 // @version      0.4
 // @description  something
