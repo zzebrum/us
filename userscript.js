@@ -7,36 +7,10 @@
 // @name:de AdGuard-Assistent 
 // @name:el Βοηθός AdGuard 
 // @name:es Asistente de Adguard 
-// @name:fa دستیار AdGuard 
-// @name:fi AdGuard Avustaja 
-// @name:fr Assistant AdGuard  
-// @name:he העוזר האישי של אדגארד 
-// @name:hi AdGuard सहायक 
-// @name:hr AdGuard Pomoćnik 
-// @name:hu AdGuard Asszisztens 
-// @name:id Asisten AdGuard 
-// @name:it AdGuard Assistant 
-// @name:ja AdGuardアシスタント 
-// @name:ko AdGuard 어시스턴트 
-// @name:lt AdGuard Asistentas 
-// @name:nl AdGuard Assistent 
-// @name:no AdGuard-assistent 
-// @name:pl Asystent AdGuarda 
-// @name:pt-PT Assistente do AdGuard 
-// @name:pt Assistente do AdGuard 
-// @name:ro Asistentul AdGuard 
-// @name:ru Помощник AdGuard 
 // @name:sk AdGuard Asistent 
 // @name:sl AdGuard Pomočnik 
 // @name:sr AdGuard pomoćnik 
 // @name:sv AdGuard-assistent 
-// @name:tr AdGuard Asistanı 
-// @name:uk Помічник AdGuard 
-// @name:vi Trợ Lý AdGuard 
-// @name:zh-HK AdGuard 小助手 
-// @name:zh-TW AdGuard 助理 
-// @name:zh 使用 AdGuard 助手 
-// @namespace adguard
 // @description Provides easy and convenient way to manage filtering right from the browser 
 // @description:ar يوفر طريقه سهله ومريحه لأداره التصفية الحقيقة من المتصفح 
 // @description:be Дазваляе лёгка і хутка кіраваць фільтрацыяй непасрэдна з браўзара 
@@ -78,12 +52,6 @@
 // @updateURL https://userscripts.adtidy.org/release/assistant/4.3/assistant.meta.js
 // @homepageURL https://github.com/AdguardTeam/AdguardAssistant
 // @include *
-// @exclude *://mil.ru/*
-// @exclude *wikipedia.org*
-// @exclude *icloud.com*
-// @exclude *hangouts.google.com*
-// @exclude *www.facebook.com/plugins/сomments*
-// @exclude *www.facebook.com/v*/plugins*
 // @exclude *disqus.com/embed/comments*
 // @exclude *vk.com/widget*
 // @exclude *twitter.com/intent/*
@@ -91,11 +59,6 @@
 // @exclude *player.vimeo.com*
 // @exclude *coub.com/embed*
 // @exclude *staticxx.facebook.com/connect/xd_arbiter/*
-// @exclude *vk.com/q_frame*
-// @exclude *tpc.googlesyndication.com*
-// @exclude *syndication.twitter.com*
-// @exclude *platform.twitter.com*
-// @exclude *tutosdeath.blogspot.com*
 // @exclude *notifications.google.com*
 // @exclude *google.com/recaptcha/*
 // @exclude *bizmania.ru/*
