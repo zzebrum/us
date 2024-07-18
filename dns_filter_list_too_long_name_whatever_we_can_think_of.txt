@@ -25,5 +25,4 @@ example.org##div
 @@thinkofbank.com
 
 
-
 ||example.com^
