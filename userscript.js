@@ -7,25 +7,6 @@
 // @name:de AdGuard-Assistent 
 // @name:el Βοηθός AdGuard 
 // @name:es Asistente de Adguard 
-// @name:fa دستیار AdGuard 
-// @name:fi AdGuard Avustaja 
-// @name:fr Assistant AdGuard  
-// @name:he העוזר האישי של אדגארד 
-// @name:hi AdGuard सहायक 
-// @name:hr AdGuard Pomoćnik 
-// @name:hu AdGuard Asszisztens 
-// @name:id Asisten AdGuard 
-// @name:it AdGuard Assistant 
-// @name:ja AdGuardアシスタント 
-// @name:ko AdGuard 어시스턴트 
-// @name:lt AdGuard Asistentas 
-// @name:nl AdGuard Assistent 
-// @name:no AdGuard-assistent 
-// @name:pl Asystent AdGuarda 
-// @name:pt-PT Assistente do AdGuard 
-// @name:pt Assistente do AdGuard 
-// @name:ro Asistentul AdGuard 
-// @name:ru Помощник AdGuard 
 // @name:sk AdGuard Asistent 
 // @name:sl AdGuard Pomočnik 
 // @name:sr AdGuard pomoćnik 
@@ -78,12 +59,6 @@
 // @updateURL https://userscripts.adtidy.org/release/assistant/4.3/assistant.meta.js
 // @homepageURL https://github.com/AdguardTeam/AdguardAssistant
 // @include *
-// @exclude *://mil.ru/*
-// @exclude *wikipedia.org*
-// @exclude *icloud.com*
-// @exclude *hangouts.google.com*
-// @exclude *www.facebook.com/plugins/сomments*
-// @exclude *www.facebook.com/v*/plugins*
 // @exclude *disqus.com/embed/comments*
 // @exclude *vk.com/widget*
 // @exclude *twitter.com/intent/*
@@ -91,11 +66,6 @@
 // @exclude *player.vimeo.com*
 // @exclude *coub.com/embed*
 // @exclude *staticxx.facebook.com/connect/xd_arbiter/*
-// @exclude *vk.com/q_frame*
-// @exclude *tpc.googlesyndication.com*
-// @exclude *syndication.twitter.com*
-// @exclude *platform.twitter.com*
-// @exclude *tutosdeath.blogspot.com*
 // @exclude *notifications.google.com*
 // @exclude *google.com/recaptcha/*
 // @exclude *bizmania.ru/*
@@ -137,13 +107,13 @@
     }
 
 
-    let _openWindow = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
-    let _get_openWindow = _openWindow.get;
-    _openWindow.get = function() {
+       let _contentWindow = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
+    let _get_contentWindow = _contentWindow.get;
+    _contentWindow.get = function() {
         let _cw = _get_contentWindow.apply(this, arguments);
         if (_cw)
             wrapRegExp(_cw);
         return _cw;
     };
-    Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', _openWindow);
+    Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', _contentWindow);
 })();
