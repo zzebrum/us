@@ -105,6 +105,7 @@
 // @grant   GM_addStyle
 // @grant   property:settings
 // @run-at document-start
+//@ts-expect-error
 // ==/UserScript==
 
 (function() {

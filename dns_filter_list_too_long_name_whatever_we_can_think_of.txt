@@ -21,6 +21,9 @@ example.org##div
 @@||dzen.ru^
 ||ya.ru^
 ||i.ua^
+@@||dealWith.com^
+@@thinkofbank.com
+
 
 
 ||example.com^
