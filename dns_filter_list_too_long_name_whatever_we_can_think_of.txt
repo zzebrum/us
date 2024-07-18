@@ -11,6 +11,6 @@
 ||meduza.io$badfilter
 @@/example.*/
 ||ya.ru^
+||example.com^
 @@||dealWith.com^
 @@thinkofbank.com
-||example.com^
