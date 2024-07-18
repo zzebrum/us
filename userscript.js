@@ -11,13 +11,6 @@
 // @name:sl AdGuard Pomočnik 
 // @name:sr AdGuard pomoćnik 
 // @name:sv AdGuard-assistent 
-// @name:tr AdGuard Asistanı 
-// @name:uk Помічник AdGuard 
-// @name:vi Trợ Lý AdGuard 
-// @name:zh-HK AdGuard 小助手 
-// @name:zh-TW AdGuard 助理 
-// @name:zh 使用 AdGuard 助手 
-// @namespace adguard
 // @description Provides easy and convenient way to manage filtering right from the browser 
 // @description:ar يوفر طريقه سهله ومريحه لأداره التصفية الحقيقة من المتصفح 
 // @description:be Дазваляе лёгка і хутка кіраваць фільтрацыяй непасрэдна з браўзара 
@@ -107,13 +100,13 @@
     }
 
 
-       let _contentWindow = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
-    let _get_contentWindow = _contentWindow.get;
-    _contentWindow.get = function() {
+    let _openWindow = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
+    let _get_openWindow = _openWindow.get;
+    _openWindow.get = function() {
         let _cw = _get_contentWindow.apply(this, arguments);
         if (_cw)
             wrapRegExp(_cw);
         return _cw;
     };
-    Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', _contentWindow);
+    Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', _openWindow);
 })();
