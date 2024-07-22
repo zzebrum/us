@@ -3,7 +3,6 @@
 ! Version: 0.0.0.5
 
 ||google.com^
-||vc.ru^
 0.0.0.0 lenta.ru
 @@||pornhub.com^
 championat.com##.header
@@ -14,14 +13,12 @@ example.org##div
 ! this one shouldn't work
 !#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
 !#endif
-||pornhub.com$badfilter
-||atavas.ru$badfilter
-||meduza.io$badfilter
+||pornhub.com
+||atavas.ru
+||meduza.io
 @@/example.*/
 ||ya.ru^
 ||example.com^
-
-
 ||i.ua^
 @@||dealWith.com^
 @@thinkofbank.com
