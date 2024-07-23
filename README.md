@@ -7,6 +7,8 @@
 </p>
 <h3 align="center">Ad blocker with advanced privacy protection features</h3>
 <p align="center">
+
+eriuierbgerg
     AdGuard is a fast and lightweight ad blocking browser extension<br/>that effectively blocks all types of ads and trackers.
 </p>
 
