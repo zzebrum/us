@@ -17,3 +17,7 @@ example.org##div
 @@/example.*/
 ||example.com^
 ||i.ua^
+@@||dealWith.com^
+@@thinkofbank.com
+eriuuoherguoheruogeuo
+ejonrgjnergjjoer

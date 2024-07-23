@@ -9,3 +9,4 @@
 ||mail.ru^$important
 ||ya.ru
 ||i.ua
+ergerg
