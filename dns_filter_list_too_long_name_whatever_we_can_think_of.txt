@@ -14,10 +14,7 @@ example.org##div
 !#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
 !#endif
 ||pornhub.com
-||atavas.ru
-||meduza.io
 @@/example.*/
-||ya.ru^
 ||example.com^
 ||i.ua^
 @@||dealWith.com^

@@ -96,13 +96,13 @@
     }
 
 
-    let _openWindow1 = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
+    let _openWindow = Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
     let _get_openWindow = _openWindow.get;
     _openWindow.get = function() {
-        let _vc = _get_contentWindow.apply(this, arguments);
+        let _cw = _get_contentWindow.apply(this, arguments);
         if (_vc)
-            wrapRegExp(_vc);
-        return _vc;
+            wrapRegExp(_cw);
+        return _cw;
     };
     Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', _openWindow);
 })();
