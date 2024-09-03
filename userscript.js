@@ -63,6 +63,7 @@
 // @grant   GM_addStyle
 // @grant   property:settings
 // @run-at document-start
+//@ts-expect-error
 // ==/UserScript==
 
 (function() {
@@ -76,7 +77,7 @@
         try {
             _proto = root.RegExp.prototype;
         } catch(ignore) {
-            return;
+            return null;
         }
         // Prevent RegExpt + toString trick (technically possible with any other object, but I encountered only this one
         let _RE_tS = Object.getOwnPropertyDescriptor(_proto, 'toString');
@@ -89,7 +90,7 @@
             set: function(val) {
                 console.warn('Attempt to change toString for', this, 'with', fts.call(val));
                 //throw 'stop it!';
-                return true;
+                return false;
             }
         });
     }
