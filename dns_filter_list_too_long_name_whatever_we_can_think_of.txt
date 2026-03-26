@@ -1,6 +1,6 @@
-! Title: Zblocked привет Ж)
-! Updated: Mon, 27 May 2022 15:39:57 +0000 
-! Version: 0.0.0.5
+! Title: Oblocked
+! Updated: Mon, 27 Feb 2026 15:39:57 +0000 
+! Version: 0.0.0.6
 
 ||google.com^
 0.0.0.0 lenta.ru
@@ -13,7 +13,6 @@ example.org##div
 ! this one shouldn't work
 !#include https://raw.githubusercontent.com/zzebrum/us/master/androidspecific.txt
 !#endif
-||pornhub.com
 @@/example.*/
 ||example.com^
 ||i.ua^
